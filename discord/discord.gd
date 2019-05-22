@@ -8,7 +8,7 @@ var user = null
 var can_use = false
 
 func _ready():
-	ipc = preload("res://discord/ipc.gd").new().get_ipc()
+	ipc = preload("./ipc.gd").new().get_ipc()
 	if ipc:
 		can_use = true
 		ipc.connect("message", self, "_ipc_message")
